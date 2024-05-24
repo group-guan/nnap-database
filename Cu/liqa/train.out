@@ -1,0 +1,57 @@
+jnncore.Train: {
+    "nnpotPath": "Cu.nn",
+    "csvPath": "train.csv",
+    "splitPath": "trainset.split",
+    "dbPath": "train.db",
+    "config": {
+        "chemsys": {
+            "species": [
+                "Cu"
+            ],
+            "erefs": [
+                -3.51
+            ]
+        },
+        "basis": {
+            "sphcheb": {
+                "nmax": 5,
+                "lmax": 6,
+                "rcut": 6.2,
+                "fcut": 0,
+                "gamma": 3.0
+            }
+        },
+        "nnarch": {
+            "a": [
+                "swish",
+                "swish"
+            ],
+            "n": [
+                15,
+                15
+            ]
+        },
+        "input": {
+            "trn_method": "lbfgs",
+            "trn_nepochs": 20000,
+            "taylor": true,
+            "taylor_ntaylor": 10,
+            "taylor_drmax": 0.02,
+            "taylor_fmin": 0.0,
+            "taylor_fmax": 10.0,
+            "trn_lbfgs_lambda": 0.001,
+            "trn_test_percent": 10.0
+        }
+    },
+    "pbar": true,
+    "fileSleepTime": 10000,
+    "trainSleepTime": 5000,
+    "nnapOut": true
+}
+Starting...
+Trainset generated.
+train 100% [=================] 20000/20000 (12:55:17 / 0:00:00) loss: 0.0009301 | 0.001108
+Train finished in nnpot/Cu-12.nn
+Potential file at step = 10502 selected
+RMSE: 1.121 meV | 1.293 meV
+MAE:  0.8160 meV | 0.8713 meV
