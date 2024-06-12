@@ -13,10 +13,23 @@ jnncore.Train: {
             ]
         },
         "basis": {
+            "type": "spherical_chebyshev",
+            "scaling_mode": 0,
+            "rmin": 1.0,
             "sphcheb": {
                 "nmax": 5,
                 "lmax": 6,
                 "rcut": 6.2,
+                "rcut_in": 0.0,
+                "fcut": 1,
+                "gamma": 3.0
+            },
+            "cheb": {
+                "n1max": 4,
+                "n2max": 4,
+                "lmax": 4,
+                "r_rc": 5.0,
+                "a_rc": 5.0,
                 "fcut": 0,
                 "gamma": 3.0
             }
@@ -27,20 +40,32 @@ jnncore.Train: {
                 "swish"
             ],
             "n": [
-                15,
-                15
+                20,
+                20
             ]
         },
         "input": {
-            "trn_method": "lbfgs",
+            "store_sf_derivs": true,
+            "keep_db_in_memory": true,
+            "delete_db_files": true,
+            "trn_force_errors": false,
+            "trn_force_weighting_factor": 0.1,
+            "trn_force_epsilon": 0.000010,
+            "trn_nn_init_method": "lecun_n",
+            "trn_test_percent": 10.0,
             "trn_nepochs": 20000,
-            "taylor": true,
-            "taylor_ntaylor": 10,
-            "taylor_drmax": 0.02,
-            "taylor_fmin": 0.0,
-            "taylor_fmax": 10.0,
-            "trn_lbfgs_lambda": 0.001,
-            "trn_test_percent": 10.0
+            "trn_method": "lbfgs",
+            "trn_samplesize": 500,
+            "trn_batchsize": 1,
+            "trn_adam_mu": 0.001,
+            "trn_adam_dr": 1.0,
+            "trn_adam_ds": 5000,
+            "trn_adam_b1": 0.9,
+            "trn_adam_b2": 0.999,
+            "trn_adam_epsilon": 1.0E-7,
+            "trn_adam_decay": 0.0,
+            "trn_lbfgs_m": 20,
+            "trn_lbfgs_lambda": 0.0
         }
     },
     "pbar": true,
@@ -50,8 +75,8 @@ jnncore.Train: {
 }
 Starting...
 Trainset generated.
-train 100% [=================] 20000/20000 (12:55:17 / 0:00:00) loss: 0.0009301 | 0.001108
-Train finished in nnpot/Cu-12.nn
-Potential file at step = 10502 selected
-RMSE: 1.121 meV | 1.293 meV
-MAE:  0.8160 meV | 0.8713 meV
+train 100% [=====================] 20000/20000 (0:38:06 / 0:00:00) loss: 0.01219 | 0.01183
+Train finished in Cu.nn
+Potential file at step = 6119 selected
+RMSE-E: 3.672 meV   | 3.388 meV  
+RMSE-F: 36.75 meV/A | 35.83 meV/A
