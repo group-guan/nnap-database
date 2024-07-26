@@ -1,7 +1,11 @@
 jnncore.Train: {
+    "TEST_E_ERR_NAME": "test_e_err.txt",
+    "TEST_F_ERR_NAME": "test_f_err.txt",
     "nnpotPath": "Cu.nn",
     "csvPath": "train.csv",
     "splitPath": "trainset.split",
+    "testEErrPath": "test_e_err.txt",
+    "testFErrPath": "test_f_err.txt",
     "dbPath": "train.db",
     "config": {
         "chemsys": {
@@ -53,7 +57,7 @@ jnncore.Train: {
             "trn_force_epsilon": 0.000010,
             "trn_nn_init_method": "lecun_n",
             "trn_test_percent": 10.0,
-            "trn_nepochs": 20000,
+            "trn_nepochs": 40000,
             "trn_method": "lbfgs",
             "trn_samplesize": 500,
             "trn_batchsize": 1,
@@ -75,8 +79,8 @@ jnncore.Train: {
 }
 Starting...
 Trainset generated.
-train 100% [=====================] 20000/20000 (0:38:06 / 0:00:00) loss: 0.01219 | 0.01183
+train 100% [=====================] 40000/40000 (4:11:15 / 0:00:00) loss: 0.01153 | 0.01133
 Train finished in Cu.nn
-Potential file at step = 6119 selected
-RMSE-E: 3.672 meV   | 3.388 meV  
-RMSE-F: 36.75 meV/A | 35.83 meV/A
+Potential file at step = 37761 selected
+RMSE-E: 3.067 meV   | 3.100 meV  
+RMSE-F: 35.20 meV/A | 34.40 meV/A
