@@ -1,0 +1,3 @@
+train-bi.db
+../../Cu/liqa/tain.db
+../../Ni/liqa/tain.db
