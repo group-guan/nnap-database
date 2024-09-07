@@ -1,0 +1,88 @@
+jnncore.Train: {
+    "TEST_E_ERR_NAME": "test_e_err.txt",
+    "TEST_F_ERR_NAME": "test_f_err.txt",
+    "nnpotPath": "CuPd.nn",
+    "csvPath": null,
+    "splitPath": null,
+    "testEErrPath": null,
+    "testFErrPath": null,
+    "dbPath": "train.db",
+    "config": {
+        "chemsys": {
+            "species": [
+                "Cu",
+                "Pd"
+            ],
+            "erefs": [
+                -3.51,
+                -5.1765
+            ]
+        },
+        "basis": {
+            "type": "spherical_chebyshev",
+            "scaling_mode": 0,
+            "rmin": 1.0,
+            "sphcheb": {
+                "nmax": 5,
+                "lmax": 6,
+                "rcut": 6.2,
+                "rcut_in": 0.0,
+                "fcut": 1,
+                "gamma": 3.0
+            },
+            "cheb": {
+                "n1max": 4,
+                "n2max": 4,
+                "lmax": 4,
+                "r_rc": 5.0,
+                "a_rc": 5.0,
+                "fcut": 0,
+                "gamma": 3.0
+            }
+        },
+        "nnarch": {
+            "a": [
+                "swish",
+                "swish"
+            ],
+            "n": [
+                20,
+                20
+            ]
+        },
+        "input": {
+            "store_sf_derivs": true,
+            "keep_db_in_memory": true,
+            "delete_db_files": true,
+            "trn_force_errors": false,
+            "trn_force_weighting_factor": 0.1,
+            "trn_force_epsilon": 0.000010,
+            "trn_nn_init_method": "lecun_n",
+            "trn_test_percent": 10.0,
+            "trn_nepochs": 30000,
+            "trn_method": "lbfgs",
+            "trn_samplesize": 500,
+            "trn_batchsize": 1,
+            "trn_adam_mu": 0.001,
+            "trn_adam_dr": 1.0,
+            "trn_adam_ds": 5000,
+            "trn_adam_b1": 0.9,
+            "trn_adam_b2": 0.999,
+            "trn_adam_epsilon": 1.0E-7,
+            "trn_adam_decay": 0.0,
+            "trn_lbfgs_m": 20,
+            "trn_lbfgs_lambda": 0.0
+        }
+    },
+    "pbar": true,
+    "fileSleepTime": 10000,
+    "trainSleepTime": 5000,
+    "nnapOut": true
+}
+Starting...
+Trainset generated.
+train 100% [#####################] 30000/30000 (2:29:34 / 0:00:00) loss: 0.01174 | 0.01237
+Train finished in CuPd.nn
+Potential file at step = 29881 selected
+RMSE-E: 2.809 meV   | 3.402 meV  
+RMSE-F: 36.06 meV/A | 37.61 meV/A
