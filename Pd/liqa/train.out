@@ -57,7 +57,7 @@ jnncore.Train: {
             "trn_force_epsilon": 0.000010,
             "trn_nn_init_method": "lecun_n",
             "trn_test_percent": 10.0,
-            "trn_nepochs": 20000,
+            "trn_nepochs": 30000,
             "trn_method": "lbfgs",
             "trn_samplesize": 500,
             "trn_batchsize": 1,
@@ -79,8 +79,8 @@ jnncore.Train: {
 }
 Starting...
 Trainset generated.
-train 100% [#####################] 20000/20000 (0:44:01 / 0:00:00) loss: 0.01393 | 0.01529
+train 100% [#####################] 30000/30000 (1:18:08 / 0:00:00) loss: 0.01779 | 0.01858
 Train finished in Pd.nn
-Potential file at step = 18578 selected
-RMSE-E: 2.211 meV   | 2.598 meV  
-RMSE-F: 43.58 meV/A | 47.48 meV/A
+Potential file at step = 30000 selected
+RMSE-E: 2.717 meV   | 3.275 meV  
+RMSE-F: 55.60 meV/A | 57.85 meV/A
