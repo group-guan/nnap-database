@@ -81,8 +81,8 @@ jnncore.Train: {
 }
 Starting...
 Trainset generated.
-train 100% [#####################] 30000/30000 (2:29:34 / 0:00:00) loss: 0.01174 | 0.01237
+train 100% [#####################] 30000/30000 (3:50:58 / 0:00:00) loss: 0.01339 | 0.01390
 Train finished in CuPd.nn
-Potential file at step = 29881 selected
-RMSE-E: 2.809 meV   | 3.402 meV  
-RMSE-F: 36.06 meV/A | 37.61 meV/A
+Potential file at step = 29273 selected
+RMSE-E: 2.996 meV   | 3.212 meV  
+RMSE-F: 41.28 meV/A | 42.75 meV/A
