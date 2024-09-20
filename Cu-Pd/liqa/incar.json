@@ -1,0 +1,22 @@
+{
+    "kspacing": 0.15,
+    "sigma": 0.1,
+    "ediff": 1e-5,
+    "algo": "Normal",
+    "xc": "pbe",
+    "setups": "recommended",
+    "prec": "Accurate",
+    "icharg": 2,
+    "istart": 0,
+    "kpar": 1,
+    "npar": 4,
+    "nelm": 100,
+    "nsim": 6,
+    "kgamma": true,
+    "lasph": true,
+    "lcharg": false,
+    "lwave": false,
+    "gga_compat": false,
+    "lreal": "Auto",
+    "isym": 0
+}
