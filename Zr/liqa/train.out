@@ -55,7 +55,7 @@ jnncore.Train: {
             "keep_db_in_memory": true,
             "delete_db_files": true,
             "trn_force_errors": false,
-            "trn_force_weighting_factor": 0.1,
+            "trn_force_weighting_factor": 0.05,
             "trn_force_epsilon": 0.000010,
             "trn_nn_init_method": "lecun_n",
             "trn_test_percent": 10.0,
@@ -81,8 +81,8 @@ jnncore.Train: {
 }
 Starting...
 Trainset generated.
-train 100% [#####################] 10000/10000 (0:22:15 / 0:00:00) loss: 0.04125 | 0.05390
+train 100% [#####################] 10000/10000 (0:32:41 / 0:00:00) loss: 0.02855 | 0.03424
 Train finished in Zr.nn
-Potential file at step = 1898 selected
-RMSE-E: 10.37 meV   | 12.07 meV  
-RMSE-F: 140.8 meV/A | 157.7 meV/A
+Potential file at step = 7945 selected
+RMSE-E: 7.296 meV   | 9.965 meV  
+RMSE-F: 124.9 meV/A | 144.4 meV/A
