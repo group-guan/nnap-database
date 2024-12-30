@@ -1,0 +1,88 @@
+jnn.core.Train: {
+    "nnpotPath": "AlNi.nn",
+    "csvPath": null,
+    "splitPath": null,
+    "testEErrPath": null,
+    "testFErrPath": null,
+    "dbPath": "train.db",
+    "config": {
+        "chemsys": {
+            "species": [
+                "Al",
+                "Ni"
+            ],
+            "erefs": [
+                -3.7456,
+                -5.7798
+            ]
+        },
+        "basis": {
+            "type": "spherical_chebyshev",
+            "scaling_mode": 0,
+            "rmin": 1.0,
+            "sphcheb": {
+                "nmax": 5,
+                "lmax": 6,
+                "rcut": 6.2,
+                "rcut_in": 0.0,
+                "fcut": 1,
+                "gamma": 3.0
+            },
+            "cheb": {
+                "n1max": 4,
+                "n2max": 4,
+                "lmax": 4,
+                "r_rc": 5.0,
+                "a_rc": 5.0,
+                "fcut": 0,
+                "gamma": 3.0
+            }
+        },
+        "nnarch": {
+            "a": [
+                "swish",
+                "swish",
+                "swish"
+            ],
+            "n": [
+                32,
+                32,
+                32
+            ]
+        },
+        "input": {
+            "store_sf_derivs": true,
+            "keep_db_in_memory": true,
+            "delete_db_files": true,
+            "trn_force_errors": false,
+            "trn_force_weighting_factor": 0.1,
+            "trn_force_epsilon": 0.000010,
+            "trn_nn_init_method": "lecun_n",
+            "trn_test_percent": 10.0,
+            "trn_nepochs": 20000,
+            "trn_method": "lbfgs",
+            "trn_samplesize": 500,
+            "trn_batchsize": 1,
+            "trn_adam_mu": 0.001,
+            "trn_adam_dr": 1.0,
+            "trn_adam_ds": 5000,
+            "trn_adam_b1": 0.9,
+            "trn_adam_b2": 0.999,
+            "trn_adam_epsilon": 1.0E-7,
+            "trn_adam_decay": 0.0,
+            "trn_lbfgs_m": 20,
+            "trn_lbfgs_lambda": 0.0
+        }
+    },
+    "pbar": true,
+    "fileSleepTime": 10000,
+    "trainSleepTime": 5000,
+    "nnapOut": true
+}
+Starting...
+Trainset generated.
+train 100% [#####################] 20000/20000 (5:39:05 / 0:00:00) loss: 0.01718 | 0.01905
+Train finished in AlNi.nn
+Potential file at step = 19977 selected
+RMSE-E: 4.381 meV   | 5.420 meV  
+RMSE-F: 52.53 meV/A | 57.74 meV/A
